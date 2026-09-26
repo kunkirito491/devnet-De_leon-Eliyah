@@ -7,26 +7,26 @@ pets = []  # starts empty — the user adds pets as the program runs
 
 def display_menu():
     print("[Pet Adoption Records Manager]")
-    print("1. Add Pet")
+    print("1. Add Pets")
     print("2. View Pets")
-    print("3. Count Available/Adopted")
-    print("4. Find Pet")
+    print("3. Available or Adopted")
+    print("4. Find Pets")
     print("5. Remove Pet")
     print("6. Exit")
 
-    choice = input("Enter your choice: ")
+    choice = input("Enter number: ")
     return choice
 
 
 def add_pet(pet_list):
     name = input("Enter pet name: ")
-    animal_type = input("Enter animal type: ")
-    status = input("Enter status (Available/Adopted): ")
+    animal_type = input("What kind of animal: ")
+    status = input("Enter status (Available or Adopted): ")
 
     pet = f"{name} | {animal_type} | {status}"
     pet_list.append(pet)
 
-    print("Pet added successfully!")
+    print("Added successfully!")
 
 
 def view_pets(pet_list):
@@ -53,7 +53,7 @@ def count_available_adopted(pet_list):
 
 
 def find_pet(pet_list):
-    search_name = input("Enter pet name to search: ")
+    search_name = input("Enter pet name: ")
 
     found = False
 
